@@ -16,6 +16,7 @@ import * as session from 'express-session';
       isGlobal: true,
       envFilePath: `.env.${process.env.NODE_ENV}`
     }),
+    // TypeOrmModule.forRoot(),
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
       useFactory: (config: ConfigService) => {
